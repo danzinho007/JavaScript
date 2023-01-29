@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Hora do Dia</title>
     <link rel="stylesheet" href="estilo1.css">
     <!--Escreva link, vai aparecer uma lista, escolha css, após isso segure CTRL e clique em estilo, vai dar erro pois o arquivo não existe, porém vai perguntar se você quer criar um arquivo css, diga que sim e pronto, arquivo criado-->
 </head>
-<body>
+<body onload="carregar()">
     <header>
-        <h1>Título</h1>
+        <h1>Hora do dia</h1>
     </header>
     <section>
-        <div>
-            Testando ...
+        <div id="msg">
+            Aqui vai aparecer a mensagem ...
         </div>
-        <div>
-            Olá!
+        <div id="foto">
+            <img id="imagem" src="manha.jpg" alt="FotoDaManha">
+            <!--Guardando na id imagem a foto manha.jpg com texto alternativo FotoDaManha-->
+            </img>
         </div>
     </section>
     <footer>
