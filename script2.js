@@ -38,6 +38,45 @@ function verificar() {
         // document.querySelectorAll
 // Não pode selecionar por querySelectorAll 
         var idade = ano - Number(fano.value)
-        res.innerHTML = `Idade calculada: ${idade}`
+        var gênero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'fot')
+// Criando ID com nome img
+// Se fosse no HTML seria : <img id='foto'>
+        if (fsex[0].checked) {
+                gênero = 'Homem'
+                if (idade >= 0 && idade < 9) {
+                        // Bebe
+                        img.setAttribute('src', 'bebe.jpg' )
+                } else if ( idade < 18 ) {
+                        // Jovem / Adolescente
+                        img.setAttribute('src', 'menino.jpg')
+                } else if ( idade < 60 ) {
+                        // Adulto
+                        img.setAttribute('src', 'adulto.jpg')
+                } else {
+                        // Idoso
+                        img.setAttribute('src', 'idoso.jpg')
+                }
+        } else if (fsex[1].checked) {
+                gênero = 'Mulher'
+                if (idade >= 0 && idade < 9) {
+                        // Bebe
+                        img.setAttribute('src', 'bebe.jpg')
+                } else if ( idade < 18 ) {
+                        // Jovem / Adolescente
+                        img.setAttribute('src', 'menina.jpg')
+                } else if ( idade < 60 ) {
+                        // Adulta
+                        img.setAttribute('src', 'adulta.jpg')
+                } else {
+                        // Idosa
+                        img.setAttribute('src', 'idosa.jpg')
+                }
+        }
+        res.style.textAlign = 'up'
+// Centralizando o texto
+        res.innerHTML = `Detectamos : ${gênero} com ${idade} anos.<br>`
+        res.appendChild(img)
     }
 }
