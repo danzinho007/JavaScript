@@ -1,0 +1,109 @@
+ <!--Comentário em HTML -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!--Comentário em HTML -->
+    <style>
+        /* Comentário em CSS */
+        body {
+            background: rgb(68,125,199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <!--Comentário em HTML -->
+    <h1>Iniciando os Estudos de DOM</h1>
+    <p>Aqui vai os resultados</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim</div><br>
+
+    <div id="msg">Clique em mim 1</div>
+    <!--Está classificando a frase como tipo msg-->
+    <div id="msg1">Clique em mim 2</div>
+    <div name="msg2">Clique em mim 3</div>
+    <div class="msg3">Clique em mim 4</div>
+    <div id="msg4">Clique em mim 5</div>
+    <div class="msg5">Clique em mim 6</div>
+    <class class="msg6">Clique em mim 6</class><br>
+    <br>
+
+    <script>
+        window.document.write('Olá Mundo !' + "<br>")
+        //Escreve 'Olá Mundo !' na tela
+        window.document.write(window.document.charset + "<br>")
+        //Aqui ele ta mandando escrever qual é o Conjunto de Caracteres do Documento
+        window.document.write(window.navigator.appName + "<br>")
+        //Aqui ele ta mandando escrever qual é o navegador que a pessoa ta usando
+        window.document.write(window.document.URL + "<br>")
+        //Aqui ele ta mandando escrever qual é o endereço ( URL ) do documento
+
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //Aqui ele ta guardando na variável p1 o conteúdo do 1° parágrafo ( se fosse o 2° seria [1])
+        window.document.write(p1.innerText + "<br>")
+        //Aqui ele ta mandando escrever na tela o conteúdo da variável p1
+        window.document.write('No 1° parágrafo está escrito : ' + p1.innerText + "<br>")
+        //Aqui ele ta mandando escrever na tela o conteúdo da variável p1
+        p1.style.color = 'blue'
+        // Aqui ele ta alterando a cor da letra da variável p1 para azul ( blue )
+
+        var corpo = window.document.body
+        // Aqui ele está guardando o elemento na variável corpo
+        corpo.style.background = 'black'
+        // Aqui ele está alterando a cor de fundo para preto ( black )
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        document.write(p2.innerText + '<br>')
+        // Esse comando escreve o texto de p2
+        document.write(p2.innerHTML)
+        //Esse comando escreve o conteúdo de p2 com a formatação 
+
+        var d = window.document.getElementById('msg')
+        // Está guardando na variável d o conteúdo de msg
+        d.style.background = 'green'
+        // Está alterando a cor de fundo da variável d para verde ( green )
+        d.innerText = 'Estou aguardando'
+        // Está alterando o texto da variável d 
+        
+        // Ou use assim :
+        document.getElementById('msg1').innerText = 'Olá'
+        document.getElementById('msg1').style.background = 'red'
+
+        var e = window.document.getElementsByName('msg2')[0]
+        e.innerText = 'Testando !'
+        e.style.background = 'blue'
+
+        var f = window.document.getElementsByClassName('msg3')[0]
+        f.innerText = 'Teste'
+        f.style.background = 'purple'
+
+        var g = window.document.querySelector('div#msg4')
+        g.style.background = 'pink'
+        g.style.color = 'black'
+        g.innerText = 'Lalalala'
+
+        var h = window.document.querySelector('div.msg5')
+        h.style.background = 'red'
+        h.innerText = 'Bebebebe'
+
+        var i = window.document.querySelector('class.msg6')
+        i.style.background = 'blue'
+        i.innerText = 'CececeCe'
+
+        //Quando é div é # 
+        //Quando é class é .
+
+    //Comentário em JavaScript
+    /* 
+    Comentário em JavaScript
+    */ 
+    </script>
+    <!--Comentário em HTML -->
+</body>
+ <!--Comentário em HTML -->
+</html>
