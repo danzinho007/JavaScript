@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DETRAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Vamos contar</title>
+    <style>
+        body {
+            background-color: blue;
+            width: 400px;
+            text-align: center;
+        }
+        div#interface {
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Vamos contar</h1>
+    <div id="interface">
+    <h2>Início <input type="number" name="incio" id="incio"></h2>
+    <h2>Fim <input type="number" name="fim" id="fim"> </h2>
+    <h2>Passo <input type="number" name="passo" id="passo"> </h2>
+    <input type="button" value="Contar" onclick="contar()">
+    <div id="contando">Contando</div>
+    </div>
+    <footer>@CursoemVideo</footer>
+    <script>
+        function contar () {
+            var n1 = window.document.getElementById('inicio')
+            var x1 = Number(n1.value)
+
+            var p1 = window.document.getElementById('passo')
+            var x2 = Number(n2.value)
+
+            var f1 = window.document.getElementById('fim')
+            var x3 = Number(f1.value)
+
+            var c1 = window.document.getElementById('contando')
+
+            var s = 0
+            while ( s <= x3 ) {
+                s = s + x2
+                res.innerHMTL = `${s}`
+            } 
+        }
+// Ex 1 até 10 com passo 2
+// n1 = x1 : 1          p1 = x2 : 2      f1 = x3 : 10
+// s = x1 + x3 ( 1 + 2 ) > s = 3
+// 
+    </script>
 </body>
 </html>
