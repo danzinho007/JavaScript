@@ -23,7 +23,7 @@
     <h2>Fim <input type="number" name="fim" id="fim"> </h2>
     <h2>Passo <input type="number" name="passo" id="passo"> </h2>
     <input type="button" value="Contar" onclick="contar()">
-    <div id="contando">Contando</div>
+    <div id="res">Contando</div>
     </div>
     <footer>@CursoemVideo</footer>
     <script>
@@ -38,17 +38,12 @@
             var x3 = Number(f1.value)
 
             var c1 = window.document.getElementById('contando')
+            var x4 = Number(c1.value)
 
-            var s = 0
-            while ( s <= x3 ) {
-                s = s + x2
-                res.innerHMTL = `${s}`
-            } 
+            if ( x1 == x3 ) {
+                res.innerHTML = `Erro`
+            }
         }
-// Ex 1 até 10 com passo 2
-// n1 = x1 : 1          p1 = x2 : 2      f1 = x3 : 10
-// s = x1 + x3 ( 1 + 2 ) > s = 3
-// 
     </script>
 </body>
 </html>
