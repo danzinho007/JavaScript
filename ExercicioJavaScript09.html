@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>Vamos contar</title>
     <style>
         body {
             background-color: blue;
-            width: 400px;
+            margin-top: 50px;
+            margin-left: 50px;
             text-align: center;
+            width: 400px;
         }
         div#interface {
             background-color: white;
@@ -17,31 +19,78 @@
     </style>
 </head>
 <body>
-    <h1>Vamos contar</h1>
-    <div id="interface">
-    <h2>Início <input type="number" name="incio" id="incio"></h2>
-    <h2>Fim <input type="number" name="fim" id="fim"> </h2>
-    <h2>Passo <input type="number" name="passo" id="passo"> </h2>
-    <input type="button" value="Contar" onclick="contar()">
-    <div id="res">Contando</div>
-    </div>
-    <footer>@CursoemVideo</footer>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>Inicio : <input type="number" name="inicio" id="txti"></p>
+            <p>Fim : <input type="number" name="fim" id="txtf"></p>
+            <p>Passo : <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
+        </div>
+        <div id="res">
+            Preparando a contagem ...
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
     <script>
         function contar () {
-            var n1 = window.document.getElementById('inicio')
-            var x1 = Number(n1.value)
+            var ini = document.getElementById('txti')
+            var fim = document.getElementById('txtf')
+            var passo = document.getElementById('txtp')
+            var res = document.getElementById('res')
 
-            var p1 = window.document.getElementById('passo')
-            var x2 = Number(n2.value)
+// var ini = document.getElementById('txti') 
+// Quando se guarda usando getElementById é um objeto que representa o elemento HTML com o ID txti
+// ou
+// Ao invés disso eu posso usar var ini = parseInt(document.getElementById('txti').value);  isso converte em Número Inteiro
+// Ou usar var ini = parseFloat(document.getElementById('txti').value);
 
-            var f1 = window.document.getElementById('fim')
-            var x3 = Number(f1.value)
+// Código abaixo : Verifica se tiver algo vazio nas variáveis ini, fim ou passo
+// Se o tamanho do valor inserido na var ini / fim / passo for 0, vai dar erro
+// Caso contrário vai mostra a mensagem : Tudo OK
 
-            var c1 = window.document.getElementById('contando')
-            var x4 = Number(c1.value)
+// var ou let = mesma coisa
+// let i = Number(ini.value) = Ta convertendo a variável ini em Número e guardando na variável i
 
-            if ( x1 == x3 ) {
-                res.innerHTML = `Erro`
+// for (let c =i; c <= f; c += p)
+// c = Contador / i = inicio /  f = fim / p = passo
+// O contador vai começar no inicio, enquanto ele for menor ou igual ao fim ele vai somar o passo
+// += é Concatenação
+
+// Unicode Emoji List 
+// Exemplo : U+1F603 fica \u{1F603}
+
+            if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+                window.alert('[ERRO] Faltam dados')
+                res.innerHTML = 'Impossível contar!'
+            } else {
+                alert('Tudo OK')
+                res.innerHTML = 'Contando : <br>'
+                let i = Number(ini.value)
+                let f = Number(fim.value)
+                let p = Number(passo.value)
+
+                if ( p <= 0 ) {
+                    window.alert('Passo Inválido! Considerando PASSO 1')
+                    p = 1
+                }
+
+                if ( i < f ) {
+                    // Contagem Crescente
+                    for( let c = i; c <= f; c += p ) {
+                        res.innerHTML += ` ${c} \u{1F603} \u{1F449}`
+                }
+                } else {
+                    // Contagem Descrente
+                    for ( let c = i; c >= f; c -=p ) {
+                        res.innerHTML += ` ${c} \u{1F603} \u{1F449}`
+                    }
+                }
+                res.innerHTML += `\u{1F3C1}`
             }
         }
     </script>
