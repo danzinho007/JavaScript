@@ -3,60 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Vamos contar</title>
     <style>
         body {
-            background-color:dodgerblue;
-            width: 500px;
-        }
-        h1 {
-            color: white;
+            background-color: blue;
+            margin-top: 50px;
+            margin-left: 50px;
             text-align: center;
+            width: 400px;
         }
         div#interface {
             background-color: white;
-
-        }
-        footer {
-            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Tabuada</h1>
-    <div id="interface">
-    <h2>Número : <input type="number" name="txtn1" id="txtn1"><input type="button" value="Gerar Tabuada" onclick="Tabuada()"></h2>
-    <div id="res">Resultado</div>
-    </div>
-    <footer>@ CursoemVideo</footer>
-<script>
-    function Tabuada() {
-        var tn1 = window.document.getElementById('txtn1')
-        var res = window.document.getElementById('res')
-        var n1 = Number(tn1.value)
-        var n2 = Number(res.value)
-        var s1 = n1
-        var s2 = n1 * 2
-        var s3 = n1 * 3
-        var s4 = n1 * 4
-        var s5 = n1 * 5
-        var s6 = n1 * 6
-        var s7 = n1 * 7
-        var s8 = n1 * 8
-        var s9 = n1 * 9
-        var s10 = n1 * 10
-        res.innerHTML = `${n1} x 1 é igual a ${s1}<br> 
-        ${n1} x 2 é igual a ${s2}<br> 
-        ${n1} x 3 é igual a ${s3}<br> 
-        ${n1} x 4 é igual a ${s4}<br> 
-        ${n1} x 5 é igual a ${s5}<br> 
-        ${n1} x 6 é igual a ${s6}<br> 
-        ${n1} x 7 é igual a ${s7}<br> 
-        ${n1} x 8 é igual a ${s8}<br> 
-        ${n1} x 9 é igual a ${s9}<br> 
-        ${n1} x 10 é igual a ${s10}`
-    }
-</script>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>Inicio : <input type="number" name="inicio" id="txti"></p>
+            <p>Fim : <input type="number" name="fim" id="txtf"></p>
+            <p>Passo : <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
+        </div>
+        <div id="calc">
+            Preparando a contagem ...
+        </div>
+        <div id="res"></div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script>
+        function contar () {
+            var i = parseInt(document.getElementById('txti').value)
+            var f = parseInt(document.getElementById('txtf').value)
+            var p = parseInt(document.getElementById('txtp').value)
+            var res = document.getElementById('res')
+            var calc = document.getElementById('calc')
+
+            if ( i == f || p == 0 || i == 0 || f == 0 ) {
+                window.alert('[ERRO] Faltam dados')
+                res.innerHTML = 'Impossível contar!'
+            } else {
+                // alert('Tudo OK')
+                res.innerHTML = '<br>'
+
+                if ( p < 0 ) {
+                    window.alert('Passo Inválido! Considerando PASSO 1')
+                    p = 1
+                }
+
+                if ( i < f ) {
+                    // Contagem Crescente
+                    calc.innerHTML = 'Contando ...'
+                    for(i ; i < f; i+=p) {
+                        res.innerHTML += ` ${i} \u{1F603} \u{1F449}`
+                }
+                } else {
+                    // Contagem Descrente
+                    for (i ; i > f; i-=p) {
+                        res.innerHTML += ` ${i} \u{1F603} \u{1F449}`
+                    }
+                }
+                res.innerHTML += `\u{1F3C1}`
+            }
+        }
+    </script>
 </body>
 </html>
