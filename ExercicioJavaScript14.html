@@ -30,23 +30,37 @@
         }
     </style>
 </head>
+
+<!-- Dicas : -->
+<!-- 1° Inserir uma caixa pro usuário digitar o valor -->
+<!-- 2° Inserir uma caixa pro usuário enviar a informação -->
+<!-- 3° Inserir uma lista supensa que é onde será mostrada a Tabuada -->
+<!-- 4° Criar uma função Tabuada -->
+<!-- 5° Guardar a informação que vem das caixas numa variável e converter ela pra Número -->
+
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Título : Usando for </h1>
     </header>
+
     <section>
         <div>
-            Testando ...
+            <p>Número : <input type="number" value="number" id="number"><input type="submit" value="Gerar Tabuada" onclick="tabuada()"></p> ...
         </div>
         <div>
-            Olá!
+            <select name="tabuada" id="seltab" size="30"></select>
+            <p>Digite um Número acima</p>
         </div>
     </section>
+
     <footer>
         <p>&copy; CursoemVideo</p>
     </footer>
     <script>
-        
+        function tabuada () {
+            let num = window.document.getElementById('number')
+            let tab = document.getElementById('seltab')
+        }
     </script>
 </body>
 </html>
