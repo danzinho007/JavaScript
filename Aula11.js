@@ -5,9 +5,9 @@
 // cálice = acento agurado
 // JavaScript usando crase : Shift + acento depois espaço ``
 
-&amp; - Representa o caractere "&"
-&lt; - Representa o caractere "<"
-&gt; - Representa o caractere ">"
-&quot; - Representa as aspas duplas (")
-&apos; - Representa as aspas simples (')
-&nbsp; - Representa um espaço em branco
+// &amp; - Representa o caractere "&"
+// &lt; - Representa o caractere "<"
+// &gt; - Representa o caractere ">"
+// &quot; - Representa as aspas duplas (")
+// &apos; - Representa as aspas simples (')
+// &nbsp; - Representa um espaço em branco

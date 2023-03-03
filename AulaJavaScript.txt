@@ -1,0 +1,23 @@
+Aulas.js 
+
+Comandos :
+
+console.log = 01,02,
+const = 13,
+do ... while = 07,08,
+for = 08
+function contagem(str) = 10
+function maior(name) = 10
+function menor(name) = 10
+function multi(x,y) = 09
+function soma(x,y) = 09
+if = 01
+if ... if ... else = 17,
+if ... else = 01,17,
+if ... else if = 02
+if ... else if ... else = 02,03,
+if ... else ... if = 02
+let = 09,
+switch ... case ... default = 04
+while = 05,06,07,08,21,
+var = 04

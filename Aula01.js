@@ -1,3 +1,5 @@
+// Comandos : console.log, if, if else
+
 console.log(' ')
 console.log('Olá, Mundo!')
 console.log(' ')

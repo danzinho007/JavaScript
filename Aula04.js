@@ -5,6 +5,8 @@
 // cálice = acento agurado
 // JavaScript usando crase : Shift + acento depois espaço ``
 
+// Comandos : var, console.log, switch...case break
+
 var agora = new Date()
 var diaSem = agora.getDay()
 

@@ -4,6 +4,7 @@
 // cálice = acento agurado
 // JavaScript usando crase : Shift + acento depois espaço ``
 
+// Comandos : console.log, if ... else ... if e if ... else if
 console.log(' ')
 console.log('Caso maior que 18')
 console.log('Como não especificou 18 ou mais não aparece nada')
