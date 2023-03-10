@@ -1,103 +1,32 @@
+<!--Comentário em HTML -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada</title>
+    <title>Document</title>
     <style>
-        body {
-            background: rgb(70, 142, 236);
-            font: normal 15 pt Arial;
-        }
-        header {
-            color: white;
-            text-align: center;
-        }
-        section {
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            width: 500px;
-            margin: auto;
-            box-shadow: 3px 3px 10px rgba(0,0,0,0,363);
-        }
-        footer {
-            color: white;
-            text-align: center;
-            font-style: italic;
-        }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Tabuada : Jeito Certo</h1>
-    </header>
-
-    <section>
-        <div>
-            <p>Número: <input type="number" name="num" id="txtn">
-            <input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
-        </div>
-        <div>
-            <select name="tabuada" id="seltab" size="30"></select>
-<!-- Elemento : tabuada, ID : seltab e size : 30 -->
-<!-- Criar um elemento de lista suspensa em uma página da web -->
-<!-- Atributo "name" especifica o nome do Elemento -->
-<!-- Elemento que é usado para enviar o valor selecionado pelo usuário para o servidor quando o formulário é enviado -->
-<!-- Atributo "id" é usado para indentificar exclusivamente o elemento -->
-<!-- Atributo "size" é usado para especificar o número de opções exibidas simultaneamente na lista suspensa-->
-                <option>Digite um número acima</option>
-<!-- <option value="v1">Valor 1</option> -->
-<!-- <option value="v2">Valor 2</option> -->
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; CursoemVideo</p>
-    </footer>
-
-<!-- Apesar de termos criado um campo pra pessoa digitar um número, ele vem como string, por isso precisa ser guardado numa variável e depois convertido em número -->
-<!-- Guardando na variável "num" o número que a pessoa digitou -->
-<!-- Guardando na variável "tab" a Área da Tabuada -->
-
-<!-- Se o valor da variável num for vazio vai dar erro -->
-
-<!-- Senão, ele converte o num pra número e guarda na variável n -->
-<!-- Variável n = Valor digitado  -->
-<!-- Criando variável c e atribuindo valor 1 -->
-<!-- Variável c = 1 -->
-<!-- Comando '' é pra limpar a tela depois do resultado -->
-<!-- Criando elemento dentro do select e colocando "option" de forma dinâmica-->
-<!-- Isso acima é como se ele fose dentro do select e tivesse digitado <option value "v1">Valor 1<option> até v30 --> 
-
-<!-- Enquanto c for menor ou igual a 30 vai fazer : -->
-<!-- O item dentro do option vai mostra n * c = n*c-->
-<!-- option precisa ter value, isso vai chamar tab1, tab2 -->
-<!-- Com isso acima a pessoa poderá selecionar as linhas da Tabuada -->
-<!-- Adicionando um Elemento Filho na variável tab que será o item -->
-<!-- A cada volta vai ganhar 1, c++  é c = c + 1 -->
-
+    <h1>Dicas</h1>
+    <h2>Para Exercício 18, 19 e 20</h2>
+    <p>Dicas :</p>
+    <ol>
+        <li>Inserir uma caixa pro usuário digitar o número</li>
+        <li>Inserir um botão pro usuário clicar pra gerar a Tabuada</li>
+        <li>Inserir uma lista supensa que é onde será mostrada a Tabuada</li>
+        <li>Criar uma função Tabuada</li>
+        <li>Guardar a informação que vem da caixas numa variável</li>
+        <li>Faz um Se...senão, se o campo for vazio, mostre algum erro</li>
+        <li>Caso contrário converta a variável pra número e faça algum dos comentos : Enquanto, Faça...enquanto ou Para ( aula08.js )</li>
+        <li>Guarde o elemento option numa variável</li>
+        <li>Mostre</li>
+        <li></li>
+        <li></li>
+    </ol>
     <script>
-        function tabuada() {
-            let num = document.getElementById('txtn')
-            let tab = document.getElementById('seltab')
-            if (num.value.length == 0) {
-                window.alert('Por favor, digite um número!')
-            } else {
-                let n = Number(num.value)
-                let c = 1
-                tab.innerHTML = ''
-                while ( c <= 30 ) {
-                    let item = document.createElement('option')
-                    item.text = `${n} x ${c} = ${n*c}`
-                    item.value = `tab${c}`
-                    tab.appendChild(item)
-                    c++
-                }
-            }
-        }
     </script>
 </body>
 </html>

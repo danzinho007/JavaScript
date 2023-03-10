@@ -32,7 +32,7 @@
 <body>
 
     <header>
-        <h1>Tabuada : Jeito Resumido</h1>
+        <h1>Tabuada : Jeito Certo</h1>
     </header>
 
     <section>
@@ -42,9 +42,15 @@
         </div>
         <div>
             <select name="tabuada" id="seltab" size="30"></select>
+<!-- Elemento : tabuada, ID : seltab e size : 30 -->
+<!-- Criar um elemento de lista suspensa em uma página da web -->
+<!-- Atributo "name" especifica o nome do Elemento -->
+<!-- Elemento que é usado para enviar o valor selecionado pelo usuário para o servidor quando o formulário é enviado -->
+<!-- Atributo "id" é usado para indentificar exclusivamente o elemento -->
+<!-- Atributo "size" é usado para especificar o número de opções exibidas simultaneamente na lista suspensa-->
                 <option>Digite um número acima</option>
-                <!-- <option value="v1">Valor 1</option> -->
-                <!-- <option value="v2">Valor 2</option> -->
+<!-- <option value="v1">Valor 1</option> -->
+<!-- <option value="v2">Valor 2</option> -->
         </div>
     </section>
 
@@ -55,49 +61,43 @@
 <!-- Apesar de termos criado um campo pra pessoa digitar um número, ele vem como string, por isso precisa ser guardado numa variável e depois convertido em número -->
 <!-- Guardando na variável "num" o número que a pessoa digitou -->
 <!-- Guardando na variável "tab" a Área da Tabuada -->
-<!-- Convertendo "num" pra Número -->
 
-<!-- Ao invés de Guardar e depois converter, podemos fazer assim : var n = parseInt(document.getElementById('txtn').value) -->
-<!-- Porém só será válido Números Inteiros -->
-<!-- Pra usar a função parseNumber precisa definir essa função em algum lugar do código antes de usar ela no código -->
+<!-- Se o valor da variável num for vazio vai dar erro -->
+
+<!-- Senão, ele converte o num pra número e guarda na variável n -->
+<!-- Variável n = Valor digitado  -->
+<!-- Criando variável c e atribuindo valor 1 -->
+<!-- Variável c = 1 -->
+<!-- Comando '' é pra limpar a tela depois do resultado -->
+<!-- Criando elemento dentro do select e colocando "option" de forma dinâmica-->
+<!-- Isso acima é como se ele fose dentro do select e tivesse digitado <option value "v1">Valor 1<option> até v30 --> 
+
+<!-- Enquanto c for menor ou igual a 30 vai fazer : -->
+<!-- O item dentro do option vai mostra n * c = n*c-->
+<!-- option precisa ter value, isso vai chamar tab1, tab2 -->
+<!-- Com isso acima a pessoa poderá selecionar as linhas da Tabuada -->
+<!-- Adicionando um Elemento Filho na variável tab que será o item -->
+<!-- A cada volta vai ganhar 1, c++  é c = c + 1 -->
 
     <script>
-    function parseNumber(str) {
-    // Remove espaços em branco do início e fim da string
-    str = str.trim();
-
-    // Substitui vírgulas por pontos para permitir números decimais
-    str = str.replace(",", ".");
-
-    // Converte a string em número
-    const num = Number(str);
-
-    // Verifica se o valor é um número válido
-    if (isNaN(num)) {
-        return null;
-    }
-
-    return num;
-}
-
-function tabuada() {
-    let n = parseNumber(document.getElementById('txtn').value)
-    let tab = document.getElementById('seltab')
-    if (n == null) {
-        window.alert('Por favor, digite um número válido!')
-    } else {
-        let c = 1
-        tab.innerHTML = ''
-        while ( c <= 30 ) {
-            let item = document.createElement('option')
-            item.text = `${n} x ${c} = ${n*c}`
-            item.value = `tab${c}`
-            tab.appendChild(item)
-            c++
+        function tabuada() {
+            let num = document.getElementById('txtn')
+            let tab = document.getElementById('seltab')
+            if (num.value.length == 0) {
+                window.alert('Por favor, digite um número!')
+            } else {
+                let n = Number(num.value)
+                let c = 1
+                tab.innerHTML = ''
+                while ( c <= 30 ) {
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    item.value = `tab${c}`
+                    tab.appendChild(item)
+                    c++
+                }
+            }
         }
-    }
-}
-
     </script>
 </body>
 </html>

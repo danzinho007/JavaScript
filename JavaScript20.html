@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estilo1.css">
+    <style>
+        body {
+            background: rgb(70, 142, 236);
+            font: normal 15 pt Arial;
+        }
+        header {
+            color: white;
+            text-align: center;
+        }
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0,363);
+        }
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Título : Usando for </h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Número : <input type="number" name="num" id="txtn"><input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="30"></select>
+            <option>Digite um número acima</option>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script>
+        function tabuada () {
+            let num = window.document.getElementById('txtn')
+            let tab = document.getElementById('seltab')
+
+            if(num.value.length == 0) {
+                window.alert('Por favor, digite um número!')
+            } else {
+                let n = Number(num.value)
+                let c = 1
+                tab.innerHTML = ''
+                for ( c = 1; c <= 30; c++ ) {
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    item.value = `tab${c}`
+                    tab.appendChild(item)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- // Contar até 5 usando for :
+for ( var e = 1; e <= 5; e++) {
+    console.log(`Código E` + e)
+} -->

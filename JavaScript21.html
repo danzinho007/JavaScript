@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estilo1.css">
+    <style>
+        body {
+            background: rgb(70, 142, 236);
+            font: normal 15 pt Arial;
+        }
+        header {
+            color: white;
+            text-align: center;
+        }
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0,363);
+        }
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Título : Usando do </h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Número : <input type="number" name="num" id="txtn"><input type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="30"></select>
+            <option>Digite um número acima</option>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script>
+        function tabuada () {
+            let num = window.document.getElementById('txtn')
+            let tab = document.getElementById('seltab')
+        }
+    </script>
+</body>
+</html>
+
+// Contar até 5 :
+<!-- console.log(`Código B1`)
+console.log(`Código B2`)
+console.log(`Código B3`)
+console.log(`Código B4`)
+console.log(`Código B5`) -->
+
+// Contar até 5 usando while :
+<!-- var c = 1
+while ( c <= 5 ) {
+    console.log(`Código C`+ c )
+    c = c + 1 // ou c++
+} -->
+
+// Contar até 5 usando do ... while :
+<!-- var d = 1
+do {
+    console.log(`Código D` + d)
+    d++
+} while ( d <= 5) -->
+
+// Contar até 5 usando for :
+<!-- for ( var e = 1; e <= 5; e++) {
+    console.log(`Código E` + e)
+} -->
