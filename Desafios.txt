@@ -1,0 +1,15 @@
+Exercícios 
+
+Nível 1 :
+Excelente, aqui estão alguns exercícios de nível 1 para praticar JavaScript:
+
+Escreva um programa que imprima "Olá, mundo!" na tela.
+Escreva um programa que peça ao usuário que digite seu nome e, em seguida, imprima "Olá, [nome do usuário]!" na tela.
+Escreva um programa que peça ao usuário que digite dois números e imprima a soma desses números na tela.
+Escreva um programa que peça ao usuário que digite três números e imprima a média aritmética desses números na tela.
+Escreva um programa que peça ao usuário que digite um número e imprima se o número é par ou ímpar na tela.
+Escreva um programa que peça ao usuário que digite dois números e imprima qual é o maior número na tela.
+Escreva um programa que peça ao usuário que digite três números e imprima o maior número na tela.
+Escreva um programa que peça ao usuário que digite três números e imprima o menor número na tela.
+Escreva um programa que peça ao usuário que digite três números e imprima esses números em ordem crescente.
+Escreva um programa que peça ao usuário que digite três números e imprima esses números em ordem decrescente.
