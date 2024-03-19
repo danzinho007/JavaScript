@@ -1,0 +1,5 @@
+
+
+ReferenceError: prompt is not defined
+
+Se você está executando este código em um ambiente que não possui uma interface de usuário, como um navegador da web, é possível que o prompt não esteja disponível. Em ambientes como esse, você precisará usar uma abordagem diferente para receber entrada do usuário.
