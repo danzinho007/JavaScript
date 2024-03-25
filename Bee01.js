@@ -74,3 +74,60 @@ console.log("DIFERENCA = " + diferenca)
 
 // Bee 1008- Salário 
 
+var A = parseInt(lines.shift()); // Número do funcionário
+var B = parseInt(lines.shift()); // Número de horas
+var C = parseFloat(lines[0]); // Valor da hora
+
+salario = B *  C;
+console.log("NUMBER = " + A);
+console.log("SALARY = U$ " + salario.toFixed(2));
+
+// Bee 1009- Salário com Bônus
+
+var A = lines.shift();// Nome do Vendedor
+var B = parseFloat(lines[0]); // Salário Fixo
+var C = parseFloat(lines[1]);// Total de vendas
+
+// Vendedor ganhar 15% de comissão sobre Total de vendas
+salario = ( C * 0.15 ) + B;
+console.log("TOTAL = R$ " + salario.toFixed(2));
+
+// Bee 1010- Cálculo Simples 
+
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var values1 = lines[0].split(' ').map(value => parseFloat(value));
+var values2 = lines[1].split(' ').map(value => parseFloat(value));
+
+var valor = (values1[1] * values1[2]) + (values2[1] * values2[2]);
+
+console.log("VALOR A PAGAR: R$ " + valor.toFixed(2));
+
+// ou 
+
+var A = parseInt(lines.shift()); // código da peça 1
+var B = parseInt(lines.shift()); // número de peças 1 
+var C = parseFloat(lines.shift); // valor unitário peça 1
+var D = parseInt(lines.shift()); // código da peça 2
+var E = parseInt(lines.shift()); // número de peças 2 
+var F = parseFloat(lines.shift); // valor unitário peça 2
+
+valor = ( B * C ) + ( E * F );
+console.log("VALOR A PAGAR: R$" + valor.toFixed(2));
+
+// ou 
+
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var A = parseInt(lines[0]); // código da peça 1
+var B = parseInt(lines[1]); // número de peças 1 
+var C = parseFloat(lines[2]); // valor unitário peça 1
+var D = parseInt(lines[3]); // código da peça 2
+var E = parseInt(lines[4]); // número de peças 2 
+var F = parseFloat(lines[5]); // valor unitário peça 2
+
+var valor = (B * C) + (E * F);
+
+console.log("VALOR A PAGAR: R$ " + valor.toFixed(2));
