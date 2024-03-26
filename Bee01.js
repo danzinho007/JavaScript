@@ -104,30 +104,46 @@ var valor = (values1[1] * values1[2]) + (values2[1] * values2[2]);
 
 console.log("VALOR A PAGAR: R$ " + valor.toFixed(2));
 
-// ou 
+// Bee 1011- Esfera 
 
-var A = parseInt(lines.shift()); // código da peça 1
-var B = parseInt(lines.shift()); // número de peças 1 
-var C = parseFloat(lines.shift); // valor unitário peça 1
-var D = parseInt(lines.shift()); // código da peça 2
-var E = parseInt(lines.shift()); // número de peças 2 
-var F = parseFloat(lines.shift); // valor unitário peça 2
+// Volume de Esfera
+// V = 4/3 * pi * R³ , sendo pi = 3.14159
+// Use 4/3.0 
+// Exemplo : 3 Volume = 113.097
 
-valor = ( B * C ) + ( E * F );
-console.log("VALOR A PAGAR: R$" + valor.toFixed(2));
+var A = parseFloat(lines[0])
 
-// ou 
+volume = (4/3.0) * 3.14159 * (A*A*A)
+console.log("VOLUME = " + volume.toFixed(3))
 
-var input = require('fs').readFileSync('/dev/stdin', 'utf8');
-var lines = input.split('\n');
+// Bee 1012- Área
 
-var A = parseInt(lines[0]); // código da peça 1
-var B = parseInt(lines[1]); // número de peças 1 
-var C = parseFloat(lines[2]); // valor unitário peça 1
-var D = parseInt(lines[3]); // código da peça 2
-var E = parseInt(lines[4]); // número de peças 2 
-var F = parseFloat(lines[5]); // valor unitário peça 2
+// Área do Triângulo que tem A por case e C por altura
+// Área do Círculo de raio C ( pi = 3.14159 )
+// Área do Trapézio que tem A e B por base e C por altura
+// ( a + b ) * h / 2
+// Área do Quadrado que tem lado B
+// Área do Retrângulo que tem lados A e B 
 
-var valor = (B * C) + (E * F);
+var A = parseFloat(lines[0]).toFixed(1)
+var a = parseFloat(A)
+var B = parseFloat(lines[1])
+var b = parseFloat(B.toFixed(1))
+var C = parseFloat(lines[2])
+var c = parseFloat(C.toFixed(1))
 
-console.log("VALOR A PAGAR: R$ " + valor.toFixed(2));
+triangulo = (a * c)/2
+circulo = 3.14159 * ( c * c )
+trapezio = ( a + b ) * C / 2
+quadrado = b * b
+retangulo = a * b
+
+console.log("TRIANGULO: " + triangulo.toFixed(3))
+console.log("CIRCULO: " + circulo.toFixed(3))
+console.log("TRAPEZIO: " + trapezio.toFixed(3))
+console.log("QUADRADO: " + quadrado.toFixed(3))
+console.log("RETANGULO: " + retangulo.toFixed(3))
+
+// Erro : NaN
+
+// Bee 1013- O Maior
