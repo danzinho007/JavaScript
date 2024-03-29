@@ -1,0 +1,74 @@
+Revisão JavaScript ( JS )
+*** Usando VisualCode ***
+
+! já monta a estrutura do código
+
+<!DOCTYPE html>
+<!-- Está dizendo pro navegador qual é o Tipo de Documento, no caso é HTML -->
+
+<html lang="en">
+<!-- Está dizendo pro navegador qual é o idioma que está escrito o documento -->
+<!-- Se estiver en é English / Inglês -->
+<!-- Se estiver pt-br é Portuguese of Brazil / Português do Brasil -->
+
+<head>
+<!--head é o Cabeçalho -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+0-Comentários :
+
+/* Comentário em CSS */
+<!--Comentário em HTML -->
+//Comentário em JavaScript
+/* 
+Comentário em JavaScript
+*/ 
+
+1-Comandos :
+
+typeof = Comando pra descobrir o tipo primitivo
+Ex: typeof NaN
+Resultado : Number
+var nome = window.prompt('Mensagem') = Está guardando a resposta da pessoa na variável nome
+window.alert('Mensagem') = Mostra uma janela quando o usuário entra na página
+window.prompt('Mensagem') = Mostra uma janela quando o usuário entra na página e pede pra ele digitar algo
+
+2-Dicas :
+
+Maiúsculas e Minúsculas fazem diferença
+Nomes Coerentes para as variáveis
+Evite se tornar "Programador alfabeto( todas variáveis são a,b,c, etc ou x,y,z)" ou "Programador Contador (n1,n2,n3, etc)"
+
+3-Variáveis :
+
+Variáveis guardam DadoS :
+Podem começar com letra, $ ou _
+Não podem começar com Números
+É possível usar Letras ou Números
+É possível usar Acentos e Símbolos
+Não podem contar Espaços
+Não podem ser Palavras Reservadas
+
+4-Categorias do JavaScript : Tipos Primitivos
+
+-Number = Cadeia de números
+--Infinity
+--NaN
+-String = Cadeia de caracteres
+-boolean = Teste Lógico
+-Null
+-Undefined
+-Objetc
+--Array
+-Function
+
+5-

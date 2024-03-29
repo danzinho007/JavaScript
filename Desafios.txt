@@ -13,3 +13,13 @@ Escreva um programa que peça ao usuário que digite três números e imprima o 
 Escreva um programa que peça ao usuário que digite três números e imprima o menor número na tela.
 Escreva um programa que peça ao usuário que digite três números e imprima esses números em ordem crescente.
 Escreva um programa que peça ao usuário que digite três números e imprima esses números em ordem decrescente.
+
+Q01 
+Qual é a diferença entre usar =, == e === em códigos escritos em JS ?
+
+Q02
+Em uma mesma expressão, temos os operadores || e &&.
+Quem eu resolvo primeiro ?
+
+Q03
+Sabe usar o operador ternário para colocar um entre dois valores em uma variável ?
