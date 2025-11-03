@@ -1,0 +1,35 @@
+Questões :
+
+Q01 
+Qual é a diferença entre usar =, == e === em códigos escritos em JS ?
+
+Q02
+Em uma mesma expressão, temos os operadores || e &&.
+Quem eu resolvo primeiro ?
+
+Q03
+Sabe usar o operador ternário para colocar um entre dois valores em uma variável ?
+
+Q04
+O que significa a sigla DOM ?
+
+Q05
+Sabe montar a árvore DOm de um website simples ?
+
+Q06
+O que são os elementos Parent e os elementos Child em um árvore DOM ?
+
+Q07
+Quais são os 5 principais métodos de selecionar elementos DOM dentro do JS ?
+
+Q08 
+Consegue citar 3 eventos que podem acontecer com elementos DOM de um site ?
+
+Q09
+O que é uma função ?
+Como criançar funções em JS ?
+
+Q10
+Sabe como pegar os valores de caixas de texto e fazer cálculos com eles ?
+
+Q11

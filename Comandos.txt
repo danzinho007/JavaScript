@@ -1,6 +1,4 @@
-Aulas.js 
-
-Comandos :
+JavaScript_Comandos:
 
 console.log = 01,02,
 const = 13,
